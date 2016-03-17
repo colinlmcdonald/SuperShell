@@ -1,4 +1,8 @@
 {
+  "name": "Super Shell",
+  "engines": {
+    "node": "4.2.6"
+  },
   "scripts": {
     "postinstall": "webpack --config ./webpack-prod.config.js --progress --colors",
     "start": "set NODE_ENV=development && nodemon server.js"
