@@ -1,6 +1,11 @@
+<<<<<<< 0736e0cc912609331b851502123affa19533d3a1
 node_modules/
 bower_components/
 *.log
 
 build/
 dist/
+=======
+node_modules
+bundle.js
+>>>>>>> Super basic shell
