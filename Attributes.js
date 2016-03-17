@@ -13,4 +13,3 @@ export default class Attributes extends Component {
 
 }
 
-module.exports = Attributes;

@@ -15,8 +15,3 @@ export default class Character extends Component {
   }
 
 }
-
-render(
-  <Character />,
-  document.getElementById('app')
-);
