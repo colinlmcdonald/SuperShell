@@ -11,4 +11,3 @@ export default class Winner extends Component {
 
 }
 
-module.exports = Winner;

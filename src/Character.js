@@ -13,5 +13,6 @@ export default class Character extends Component {
       </div>
     )
   }
-
 }
+
+

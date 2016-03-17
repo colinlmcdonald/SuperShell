@@ -3,25 +3,37 @@ var webpack = require('webpack');
 
 module.exports = {
   devtool: 'eval',
+
   entry: [
     'webpack-dev-server/client?http://localhost:3000',
     'webpack/hot/only-dev-server',
-    './index'
+    './src/index'
   ],
+
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
-    publicPath: '/static/'
+    publicPath: '/public/'
   },
+
   plugins: [
-    new webpack.HotModuleReplacementPlugin()
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
   ],
+
+  resolve: {
+    extensions: ['', '.js', '.jsx']
+  },
+
   module: {
-    loaders: [{
-      test: /\.js$/,
-      exclude: /node_modules/,
-      loaders: ['react-hot', 'babel?presets[]=react,presets[]=es2015'],
-      include: path.join(__dirname)
-    }]
+    loaders: [
+      { test: /\.js$/,
+        loaders: ['react-hot', 'babel?presets[]=react,presets[]=es2015'] },
+      { test: /\.scss?$/,
+        loader: 'style!css!sass',
+        include: path.join(__dirname, 'css') },
+      { test: /\.css$/,
+        loader: 'style!css' }
+    ]
   }
-};
+}
