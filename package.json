@@ -1,5 +1,4 @@
 {
-  "name": "Super Shell",
   "engines": {
     "node": "4.2.6"
   },
