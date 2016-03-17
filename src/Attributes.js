@@ -10,6 +10,4 @@ export default class Attributes extends Component {
       </div>
     )
   }
-
 }
-
