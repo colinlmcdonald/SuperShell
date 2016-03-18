@@ -26,7 +26,9 @@ module.exports = {
     loaders: [
       { test: /\.js$/,
         loaders: ['react-hot', 'babel?presets[]=react,presets[]=es2015'],
-        exclude: /node_modules/ },
+        exclude: /node_modules/,
+        include: path.join(__dirname, 'public'),
+      },
       { test: /\.scss?$/,
         loader: 'style!css!sass',
         include: path.join(__dirname, 'css') },
