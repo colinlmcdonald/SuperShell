@@ -3,8 +3,9 @@ var webpack = require('webpack');
 
 module.exports = {
   devtool: 'source-map',
+  context: __dirname + '/src',
   entry: [
-    './src/index.js'
+    './index.js'
   ],
   output: {
     path: path.join(__dirname, 'public'),
