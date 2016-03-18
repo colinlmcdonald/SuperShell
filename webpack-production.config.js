@@ -27,7 +27,7 @@ module.exports = {
     loaders: [
       { test: /\.js$/,
         loaders: ['babel?presets[]=react,presets[]=es2015'],
-        include: path.join(__dirname) },
+        include: path.join(__dirname), 'src' },
       { test: /\.scss?$/,
         loader: 'style!css!sass',
         include: path.join(__dirname, 'css') },
