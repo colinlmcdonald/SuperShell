@@ -4,7 +4,11 @@ var webpack = require('webpack');
 module.exports = {
   devtool: 'source-map',
   entry: [
+<<<<<<< e8825a9d51a82c96b796282dbbb628ff33f5be25
     './src/index.js'
+=======
+    './public/src/index.js'
+>>>>>>> Heroku
   ],
   output: {
     path: path.join(__dirname, 'public'),
