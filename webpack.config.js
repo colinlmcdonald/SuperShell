@@ -29,7 +29,7 @@ module.exports = {
     loaders: [
       { test: /\.js$/,
         loaders: ['react-hot', 'babel?presets[]=react,presets[]=es2015'],
-        include: path.join(__dirname, 'public'),
+        include: path.join(__dirname, 'src'),
       },
       { test: /\.scss?$/,
         loader: 'style!css!sass',
