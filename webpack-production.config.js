@@ -15,7 +15,7 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin({
       minimize: true,
       compress: {
-        warnings: true
+        warnings: false
       }
     })
   ],
@@ -25,7 +25,7 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.js$/,
-        loaders: ['babel'],
+        loaders: ['babel-loader'],
         include: path.join(__dirname, 'src') },
       { test: /\.scss?$/,
         loader: 'style!css!sass',

@@ -8,7 +8,7 @@ export default class Character extends Component {
   render(){
     return (
       <div>
-        Bleargh
+        Bleargh Me Precious
         <Attributes />
       </div>
     )
