@@ -1,6 +1,17 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import Character from './Character';
+import 'babel-polyfill'
+import React from 'react'
+import { render } from 'react-dom'
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware } from 'redux'
+import Character from './Character'
+import rootReducer from './reducers'
+import thunkMiddleware from 'redux-thunk'
 
+const store = applyMiddleware(thunkMiddleware)(createStore);
 
-ReactDOM.render(<Character />, document.getElementById('app'));
+render(
+  <Provider store={store(rootReducer)}>
+  	<Character />
+  </Provider>,
+  document.getElementById('app')
+)

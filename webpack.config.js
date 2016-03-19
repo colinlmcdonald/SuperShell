@@ -13,7 +13,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'public'),
     filename: 'bundle.js',
-    publicPath: '/public/'
+    publicPath: '/'
   },
 
   plugins: [
@@ -37,5 +37,10 @@ module.exports = {
       { test: /\.css$/,
         loader: 'style!css' }
     ]
-  }
+  },
+
+  devServer: {
+    historyApiFallback: true,
+    contentBase: './',
+  },
 }
